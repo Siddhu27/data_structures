@@ -1,0 +1,281 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+
+\usepackage{amsthm}
+\usepackage{forest}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\raggedbottom
+\setlength{\parindent}{0pt}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Assignment 1}
+\author{BHUKYA SIDDHU - EE18BTECH11004}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+Download all python and c codes from 
+\begin{lstlisting}
+https://github.com/Siddhu27/data_structures
+\end{lstlisting}
+%
+and latex-tikz codes from 
+%
+\begin{lstlisting}
+https://github.com/Siddhu27/data_structures
+\end{lstlisting}
+\section{Problem}
+Define $R_{n}$ to be the maximum amount earned by cutting a rod of length n meters into one or more pieces of integer length and selling them. For $i>0$, let p[i] denote the selling price of a rod whose length is i meters. Consider the array of prices:\\
+\begin{center}
+    p[1]=1,p[2]=5,p[3]=8,p[4]=9,
+    p[5]=10,p[6]=17,p[7]=18.
+\end{center}
+Which of the following statements is/are correct about $R_{7}$ ?\\
+\newline
+A. $R_{7}=18$\\
+B. $R_{7}=19$\\
+C. $R_{7}$ is achieved by three different solutions.\\
+D. $R_{7}$ cannot be achieved by a solution consisting of three pieces.\\
+\newline
+\textbf{Solution :}
+\newline
+Solutions for the given question are :\\
+$R_{7}=18$\\
+$R_{7}$ is achieved by three different solutions.\\
+\section{Explanation :}
+The idea to solve the problem is by dividing into smaller problems. Let the length of the rod is "i" meters then if the rod is cut into into two pieces at the position "j" ($j<i$) then the length of the two pieces will be j and i-j meters. Now by finding the maximum selling prices of the two pieces of rod will give the maximum selling price of the "i" length rod.To find maximum selling price of "j" meters length rod we need to find the maximum selling prices of the smaller pieces of the rod.So this can be written as recursive function given below :
+
+\begin{center}
+    cutRod(n) = max(price[i] + cutRod(n-i-1)) \\
+    for all i in $\{0, 1 .. n-1\}$
+\end{center}
+where cutRod(n) gives the required (best possible price) value for a rod of length n. 
+\newline
+\newline
+Following code gives the maximum selling price by selling the rod of n meters.
+\begin{lstlisting}
+#include<stdio.h>
+#include<limits.h>
+ 
+// used to get the maximum of two integers
+int max(int a, int b) { return (a > b)? a : b;}
+ 
+/* Returns the best obtainable price for a rod of length n and
+   price[] as prices of different pieces */
+int cutRod(int price[], int n)
+{
+   if (n<=0)
+   {
+	   return 0;
+   }
+   int max_val=INT_MIN;
+   int i;
+   for (i= 0; i < n; i++)
+   {
+	   max_val = max(max_val, price[i] + cutRod(price,n-i-1));
+   }
+ 
+   return max_val;
+}
+ 
+int main()
+{
+    int arr[] = {1, 5, 8, 9, 10, 17, 18};
+    int size = sizeof(arr)/sizeof(arr[0]);
+    printf("Maximum Obtainable Value is %d", cutRod(arr, size));
+    return 0;
+}
+
+\end{lstlisting}
+
+From the above code we get $R_{7}=18$\\
+\newline
+The time complexity of the above code is O($2^n$) as n increases the time complexity also increases.
+So we have to choose other best solution.\\
+
+  \begin{forest}
+    for tree={
+      circle,
+      draw,
+      minimum width=2.5em,
+      l sep+=1.5em,
+      s sep+=1em,
+      anchor=center,
+      edge path={
+        \noexpand\path[\forestoption{edge}](!u.parent anchor)--(.child anchor)[my edge labels]\forestoption{edge label};
+      },
+    },
+    delay={
+      where n=1{
+        edge label/.wrap 2 pgfmath args={
+          node[midway, left]{}}{level}{n}
+      }{
+        edge label/.wrap 2 pgfmath args={
+          node[midway, right]{}}{level}{n}
+      },
+    }
+    [CR(3) [CR(2) [CR(1)] [CR(0)]] [CR(1) [CR(0)]] [CR(0) ]]
+  \end{forest}
+\newline
+\newline
+The above tree diagram is for CutRod(3).Like this we can draw for cutRod(7).We can see that
+CR(5),CR(4),CR(3),CR(2),CR(1),CR(0) are being called again and again.Because of this the time comlexity of the code get increases. So now we store their values in an array and use them when they are needed.So this is a Dynamic Programming problem.The code for this approach is given below :
+\newline
+\begin{lstlisting}
+#include<stdio.h>
+#include<limits.h>
+//used to find the maximum vaule between two numbers
+int max(int a, int b) { return (a > b)? a : b;}
+ 
+/* Returns the best obtainable price for a rod of length n and
+   price[] as prices of different pieces */
+int cutRod(int price[], int n)
+{
+   int val[n+1];
+   val[0] = 0;
+   int i, j;
+ 
+   // Build the table val[] in bottom up manner and return the last entry
+   // from the table
+   for (i = 1; i<=n; i++)
+   {
+       int max_val = INT_MIN;
+       for (j = 0; j < i; j++)
+         max_val = max(max_val, price[j] + val[i-j-1]);
+       val[i] = max_val;
+   }
+ 
+   return val[n];
+}
+ 
+int main()
+{
+    int arr[] = {1, 5, 8, 9, 10, 17, 18};
+    int size = sizeof(arr)/sizeof(arr[0]);
+    printf("Maximum Obtainable Value is %d", cutRod(arr, size));
+    return 0;
+}
+
+
+\end{lstlisting}
+Now the function values which are called repeatedly are stored in an array and used when they are needed.Time complexity of this code is O($n^2$).
+\newline
+\newline
+Therefore, we get $R_{7}=18$ and it can be achieved by solution consisting of three pieces\\
+$p[2]+p[2]+p[3]=5+5+8=18$
+\end{document}
